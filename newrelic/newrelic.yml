@@ -210,10 +210,7 @@ common: &default_settings
   # guide before you enable this feature: https://urldefense.com/v3/__https://docs.newrelic.com/docs/apm/distributed-tracing/getting-started/transition-guide-distributed-tracing__;!!B5cixuoO7ltTeg!VaJWeD8cf-C1SfAzY8mSDv8LP1km8BhUwsMt4mxdtkisR-vFJs6Z1RIvLHGyzxktCbk$ 
   # Default is false.
   distributed_tracing:
-    enabled: true
-  infinite_tracing:
-    trace_observer:
-      host: "ef4c5362-f73e-46bf-a093-4f6a72930a7b.aws-us-east-1.tracing.edge.nr-data.net"    
+    enabled: false
 
   # Cross Application Tracing adds request and response headers to
   # external calls using supported HTTP libraries to provide better
