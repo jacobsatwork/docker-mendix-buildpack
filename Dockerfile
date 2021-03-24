@@ -37,6 +37,7 @@ RUN wget https://mxblobstore.azureedge.net/mxblobstore/libpng12-0_1.2.54-1ubuntu
 RUN echo "New Relic Section"
 RUN echo  "New Relic Section -" $BUILD_PATH
 RUN mkdir -m 775 -p /opt/newrelic
+RUN chmod 777 /opt/newrelic
 RUN pwd
 RUN echo "Listing directory"
 RUN ls -l 
