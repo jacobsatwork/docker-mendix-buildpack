@@ -294,7 +294,7 @@ development:
 
 test:
   <<: *default_settings
-  app_name: atwork-uat2;polaris-uat
+  app_name: atwork-uat2;polaris-uat;;polaris-uat2
 
 production:
   <<: *default_settings
