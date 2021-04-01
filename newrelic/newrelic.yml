@@ -290,11 +290,11 @@ common: &default_settings
 
 development:
   <<: *default_settings
-  app_name: atwork-dev
+  app_name: 
 
 test:
   <<: *default_settings
-  app_name: atwork-uat2;polaris-uat;polaris-uat2
+  app_name: 
 
 production:
   <<: *default_settings
