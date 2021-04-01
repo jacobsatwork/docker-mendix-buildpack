@@ -29,7 +29,7 @@ common: &default_settings
   # app_name: My Application;My Application 2
   # This setting is required. Up to 3 different application names can be specified.
   # The first application name must be unique.
-  app_name: atwork-dev;atwork-uat2
+  app_name: atwork
 
   # To enable high security, set this property to true. When in high
   # security mode, the agent will use SSL and obfuscated SQL. Additionally,
@@ -42,7 +42,7 @@ common: &default_settings
   # This provides a finer-grained performance breakdown for
   # web apps in New Relic.
   # Default is false.
-  enable_auto_app_naming: true
+  enable_auto_app_naming: false
 
   # Set to true to enable component-based transaction naming.
   # Set to false to use the URI of a web request as the name of the transaction.
@@ -210,7 +210,7 @@ common: &default_settings
   # guide before you enable this feature: https://urldefense.com/v3/__https://docs.newrelic.com/docs/apm/distributed-tracing/getting-started/transition-guide-distributed-tracing__;!!B5cixuoO7ltTeg!VaJWeD8cf-C1SfAzY8mSDv8LP1km8BhUwsMt4mxdtkisR-vFJs6Z1RIvLHGyzxktCbk$ 
   # Default is false.
   distributed_tracing:
-    enabled: false
+    enabled: true
 
   # Cross Application Tracing adds request and response headers to
   # external calls using supported HTTP libraries to provide better
