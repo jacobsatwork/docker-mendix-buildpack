@@ -1,4 +1,3 @@
-
 # Dockerfile to create a Mendix Docker image based on either the source code or
 # Mendix Deployment Archive (aka mda file)
 #
@@ -34,6 +33,23 @@ RUN wget https://mxblobstore.azureedge.net/mxblobstore/libpng12-0_1.2.54-1ubuntu
    echo "CF Buildpack version ${CF_BUILDPACK}" &&\
    wget -qO- https://github.com/misraa-zz/cf-mendix-buildpack/archive/${CF_BUILDPACK}.tar.gz | tar xvz -C buildpack --strip-components 1
 
+#NewRelic section
+RUN echo "New Relic Section"
+RUN echo  "New Relic Section -" $BUILD_PATH
+RUN mkdir -m 775 -p /opt/newrelic
+RUN chmod 777 /opt/newrelic
+RUN pwd
+RUN echo "Listing directory"
+RUN ls -l 
+RUN echo "Listing directory under /opt"
+RUN ls -l /opt/
+RUN echo "Listing directory under /opt/newrelic"
+RUN ls -l /opt/newrelic/
+ADD newrelic* /opt/newrelic/
+#ADD https://github.com/misraa-zz/docker-mendix-buildpack/blob/telegrafext-nonroot/newrelic/newrelic-api.jar /opt/newrelic/newrelic.jar
+#ADD https://github.com/misraa-zz/docker-mendix-buildpack/blob/telegrafext-nonroot/newrelic/newrelic.yml /opt/newrelic/newrelic.yml
+#RUN chown -R mendix:root /opt/newrelic
+#RUN chmod -R g+rwX /opt/newrelic
 
 # Copy python scripts which execute the buildpack (exporting the VCAP variables)
 COPY scripts/compilation /buildpack 
