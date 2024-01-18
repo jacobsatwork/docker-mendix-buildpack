@@ -31,7 +31,7 @@ RUN wget https://mxblobstore.azureedge.net/mxblobstore/libpng12-0_1.2.54-1ubuntu
    "/.java/.userPrefs/com/mendix/core" "/root/.java/.userPrefs/com/mendix/core" &&\
    ln -s "/.java/.userPrefs/com/mendix/core/prefs.xml" "/root/.java/.userPrefs/com/mendix/core/prefs.xml" &&\
    echo "CF Buildpack version ${CF_BUILDPACK}" &&\
-   wget -qO- https://github.com/misraa-zz/cf-mendix-buildpack/archive/${CF_BUILDPACK}.tar.gz | tar xvz -C buildpack --strip-components 1
+   wget -qO- https://github.com/nirmala-yadav-2509/cf-mendix-buildpack/archive/${CF_BUILDPACK}.tar.gz | tar xvz -C buildpack --strip-components 1
 # Copy python scripts which execute the buildpack (exporting the VCAP variables)
 COPY scripts/compilation /buildpack 
 # Copy project model/sources
